@@ -1,37 +1,32 @@
-name: Build Wear OS APK
+name: Build APK
 
 on:
   push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-  workflow_dispatch:  # Allows manual trigger
+      branches: [ main ]
+        pull_request:
+            branches: [ main ]
+              workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-    
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: gradle
-    
-    - name: Grant execute permission for gradlew
-run: chmod +x hiking-watch-app/gradlew    
-    - name: Create local.properties
-      run: echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
-    
-    - name: Build Debug APK
-run: ./hiking-watch-app/gradlew assembleDebug    
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: hiking-tracker-debug-apk
-        path: app/build/outputs/apk/debug/*.apk
-        retention-days: 30
+              jobs:
+                build:
+                    runs-on: ubuntu-latest
+                        steps:
+                            - uses: actions/checkout@v3
+
+                                    - name: Set up JDK 17
+                                          uses: actions/setup-java@v3
+                                                with:
+                                                        java-version: '17'
+                                                                distribution: 'temurin'
+
+                                                                        - name: Make gradlew executable
+                                                                              run: chmod +x ./hiking-watch-app/gradlew
+
+                                                                                      - name: Build APK
+                                                                                            run: cd hiking-watch-app && ./gradlew assembleDebug
+
+                                                                                                    - name: Upload APK
+                                                                                                          uses: actions/upload-artifact@v3
+                                                                                                                with:
+                                                                                                                        name: hiking-tracker-debug-apk
+                                                                                                                                path: hiking-watch-app/app/build/outputs/apk/debug/app-debug.apk
