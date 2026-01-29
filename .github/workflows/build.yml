@@ -23,8 +23,7 @@ jobs:
         cache: gradle
     
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    
+run: chmod +x hiking-watch-app/gradlew    
     - name: Create local.properties
       run: echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
     
