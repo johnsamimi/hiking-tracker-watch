@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hiking Tracker</string>
+    <string name="start_tracking">Start</string>
+    <string name="stop_tracking">Stop</string>
+    <string name="pause_tracking">Pause</string>
+    <string name="resume_tracking">Resume</string>
+    <string name="tracking_active">Tracking Active</string>
+    <string name="tracking_paused">Tracking Paused</string>
+    <string name="track_saved">Track Saved!</string>
+    <string name="gps_signal_lost">GPS Signal Lost</string>
+    <string name="gps_signal_weak">GPS Signal Weak</string>
+    <string name="waiting_for_gps">Waiting for GPS...</string>
+    <string name="location_permission_required">Location permission is required for GPS tracking</string>
+    <string name="distance">Distance</string>
+    <string name="duration">Duration</string>
+    <string name="altitude">Altitude</string>
+    <string name="speed">Speed</string>
+    <string name="elevation_gain">Elevation Gain</string>
+    <string name="elevation_loss">Elevation Loss</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary colors -->
+    <color name="primary">#FF5722</color>
+    <color name="primary_dark">#E64A19</color>
+    <color name="accent">#4CAF50</color>
+    
+    <!-- Track colors -->
+    <color name="track_line">#FF5722</color>
+    <color name="track_line_gradient_start">#FFFF5722</color>
+    <color name="track_line_gradient_end">#80FF5722</color>
+    
+    <!-- UI colors -->
+    <color name="background">#000000</color>
+    <color name="surface">#121212</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+    
+    <!-- Button colors -->
+    <color name="btn_start">#4CAF50</color>
+    <color name="btn_stop">#F44336</color>
+    <color name="btn_pause">#FF9800</color>
+    <color name="btn_center">#2196F3</color>
+    
+    <!-- Stats colors -->
+    <color name="stat_altitude">#4FC3F7</color>
+    <color name="stat_speed">#81C784</color>
+    <color name="stat_distance">#FFB74D</color>
+    
+    <!-- Marker colors -->
+    <color name="marker_start">#4CAF50</color>
+    <color name="marker_current">#2196F3</color>
+    <color name="marker_waypoint">#9C27B0</color>
+</resources>
